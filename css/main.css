@@ -119,10 +119,16 @@ nav li a {
     left: 0;
     width: 100vw;
     height: 100vh;
+}
+
+nav {
+    width: 100vw;
+    height: 100vh;
     background: var(--sec-color);
     transform: translateX(0);
     transition: .5s;
 }
+
 .open-nav .menu span {
     width: 24px;
 }
@@ -148,9 +154,11 @@ nav li a {
 }
 
 .close-nav nav {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     transform: translateX(100%);
 }
 
@@ -162,6 +170,9 @@ nav li a {
     .container nav {
         position: unset;
         transform: initial;
+        width: unset;
+        height: unset;
+        background: none;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -215,7 +226,10 @@ nav li a {
 /* --- main --- */
 
 main {
-    margin-top: 4em;
+    height: calc(100vh - 72.66px);
+    display: grid;
+    place-content: center;
+    margin-top: -3em;
 }
 
 main .left {
@@ -278,7 +292,7 @@ main .left {
 
 img.right {
     width: 450px;
-    position: absolute;
+    position: fixed;
     right: -100px;
     bottom: 0;
     opacity: .5;
@@ -286,6 +300,10 @@ img.right {
 }
 
 @media (min-width: 480px) {
+    main {
+        margin-top: -1em;
+    }
+
     .left p {
         font-size: .9rem;
         color: #fff;
@@ -294,7 +312,7 @@ img.right {
 
 @media (min-width: 768px) {
     main {
-        margin-top: 7.5em;
+        margin-top: 0;
     }
 
     main .container {
