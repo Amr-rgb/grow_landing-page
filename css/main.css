@@ -226,10 +226,11 @@ nav {
 /* --- main --- */
 
 main {
-    height: calc(100vh - 72.66px);
+    height: calc(100vh - 58px);
     display: grid;
     place-content: center;
     margin-top: -3em;
+    padding: 2em 0;
 }
 
 main .left {
@@ -301,6 +302,7 @@ img.right {
 
 @media (min-width: 480px) {
     main {
+        height: calc(100vh - 54px);
         margin-top: -1em;
     }
 
@@ -312,6 +314,7 @@ img.right {
 
 @media (min-width: 768px) {
     main {
+        height: calc(100vh - 72.66px);
         margin-top: 0;
     }
 
